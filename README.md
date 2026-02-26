@@ -1,70 +1,128 @@
-# Bedrijfswebsite - Deployment Gids
+# YOLO Career Website - Deployment Gids
 
 ## 📋 Overzicht
-Een moderne, responsieve bedrijfswebsite gebouwd met HTML5, CSS3 en JavaScript. De website bevat alle essentiële pagina's voor een professionele bedrijfspresentatie.
+Een professionele website voor YOLO Career - Loopbaanbegeleiding op maat door Olivier Aucremanne. De website biedt toegankelijke en betaalbare loopbaanbegeleiding voor jongvolwassenen en iedereen die zich nog jong voelt.
 
-## 🚀 Features
-- **Responsive Design**: Werkt perfect op desktop, tablet en mobiel
-- **Modern 2024 Trends**: 3D effecten, donkere modus ondersteuning, glasmorfisme
-- **SEO Geoptimaliseerd**: Semantische HTML structuur
-- **Toegankelijkheid**: WCAG richtlijnen gevolgd
-- **Performance**: Geoptimaliseerd voor snelle laadtijden
-- **Cross-browser**: Compatibel met alle moderne browsers
+## 🎯 YOLO Career Features
+- **Individueel Traject**: €90 voor persoonlijk uitgewerkt carrièrepad
+- **Groeps-Traject**: Betaalde opdrachten bij diverse bedrijven
+- **Persoonlijkheidsprofiel**: Inzicht in sterktes en voorkeuren
+- **Professioneel Potentieel**: Carrière-richtingen die bij je passen
+- **Concrete Vervolgstappen**: Echte bedrijven en vacatures
+
+## 🚀 Website Kenmerken
+- **Responsive Design**: Perfect op alle apparaten
+- **YOLO Brand Kleuren**: Paars (creativiteit) en oranje (energie)
+- **Toegankelijk**: Duidelijke prijzen en laagdrempelige communicatie
+- **Contact Formulier**: Met specifieke opties voor beide trajecten
+- **SEO Geoptimaliseerd**: Voor loopbaanbegeleiding zoektermen
 
 ## 📁 Bestandsstructuur
 ```
 website/
-├── index.html              # Homepage
+├── index.html              # Complete YOLO Career website
 ├── css/
-│   └── style.css           # Hoofdstijlbestand
+│   └── style.css           # YOLO Career styling
 ├── js/
-│   └── script.js           # JavaScript functionaliteit
-├── pages/
-│   └── about.html          # Over Ons pagina
-├── images/                 # Map voor afbeeldingen
+│   └── script.js           # Interactieve functionaliteit
+├── images/                 # Map voor Olivier's foto en andere afbeeldingen
 └── README.md              # Deze gids
 ```
 
-## 🌐 Online Zetten - Opties
+## 🌐 Online Zetten
 
-### Optie 1: GitHub Pages (GRATIS)
-1. **GitHub Account**: Maak een account op github.com
-2. **Repository**: Maak een nieuwe repository genaamd `jouw-bedrijf-website`
-3. **Upload**: Upload alle bestanden naar de repository
+### Aanbevolen: GitHub Pages
+1. **GitHub Account**: Maak account op github.com
+2. **Repository**: Maak nieuwe repository `yolo-career-website`
+3. **Upload**: Upload alle bestanden
 4. **Settings**: Ga naar Settings > Pages
-5. **Source**: Selecteer "Deploy from a branch" > "main" > "/ (root)"
-6. **URL**: Je website is beschikbaar op `https://jouwgebruikersnaam.github.io/jouw-bedrijf-website`
+5. **Activeer**: Selecteer "main" branch
+6. **URL**: Website beschikbaar op `https://jouwgebruikersnaam.github.io/yolo-career-website`
 
-### Optie 2: Netlify (GRATIS)
-1. **Account**: Maak een account op netlify.com
-2. **Drag & Drop**: Sleep de hele `website` map naar Netlify
-3. **Deploy**: Automatische deployment binnen 30 seconden
-4. **Custom Domain**: Optioneel eigen domeinnaam koppelen
+### Alternatief: Netlify
+1. **Account**: Maak account op netlify.com
+2. **Deploy**: Sleep website map naar Netlify
+3. **Custom Domain**: Koppel yolocareer.be domein
 
-### Optie 3: Vercel (GRATIS)
-1. **Account**: Maak een account op vercel.com
-2. **Import**: Importeer vanaf GitHub of upload direct
-3. **Deploy**: Automatische deployment
-4. **Domain**: Gratis subdomain of eigen domain
+## 🎨 Belangrijke Aanpassingen
 
-## ⚙️ Aanpassingen Maken
+### 1. Olivier's Foto Toevoegen
+- **Upload foto**: Plaats foto in `images/` map als `olivier-profile.jpg`
+- **Update HTML**: Vervang in index.html:
+```html
+<!-- Van: -->
+<div class="profile-placeholder">
+    <i class="fas fa-user-circle"></i>
+    <p class="upload-note">Foto van Olivier Aucremanne komt hier</p>
+</div>
 
-### Bedrijfsinformatie Wijzigen
-1. **Bedrijfsnaam**: Zoek en vervang "Jouw Bedrijf" in alle HTML bestanden
-2. **Contactgegevens**: Update adres, telefoon en email in contact secties
-3. **Kleuren**: Pas CSS variabelen aan in `:root` sectie van style.css
+<!-- Naar: -->
+<img src="images/olivier-profile.jpg" alt="Olivier Aucremanne" 
+     style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover;">
+```
 
-### Content Aanpassen
-- **Homepage**: Bewerk `index.html` voor hero tekst en diensten
-- **Over Ons**: Pas `pages/about.html` aan voor bedrijfsverhaal
-- **Team**: Update teamleden informatie in about.html
+### 2. Contactgegevens Aanpassen
+Update in index.html:
+```html
+<!-- Telefoon -->
+<p>+32 (0)xxx xx xx xx</p>  →  <p>+32 (0)jouw-nummer</p>
 
-## 📱 Responsive Breakpoints
-- **Desktop**: 1200px+
-- **Tablet**: 768px - 1199px  
-- **Mobile**: 320px - 767px
+<!-- Email -->
+<p>olivier@yolocareer.be</p>  →  <p>jouw-echte-email@domein.be</p>
+```
 
-## 🎨 Kleurenschema
-- **Primair**: #2563eb (Blauw)
-- **Secundair**: #64748b (Grijs)
-- **Accent**: #f59e0b (Oranje)
+### 3. Domein Koppelen
+Voor `yolocareer.be` domein:
+- **Koop domein**: Via Belgische registrar (Combell, Hostbasket)
+- **DNS instellen**: Verwijs naar GitHub Pages of Netlify
+- **SSL**: Automatisch HTTPS certificaat
+
+### 4. Prijzen Aanpassen
+Als je de €90 prijs wilt wijzigen:
+```html
+<span class="price">€90</span>  →  <span class="price">€jouw-prijs</span>
+```
+
+## 🎨 Brand Kleuren
+- **Primair**: #7c3aed (Paars - creativiteit en transformatie)
+- **Accent**: #f59e0b (Oranje - energie en optimisme)
+- **Succes**: #10b981 (Groen - voor prijzen en positieve acties)
+
+## 📱 Responsive Design
+- **Desktop**: Volledig uitgebreide layout
+- **Tablet**: Aangepaste grid layouts
+- **Mobiel**: Gestapelde secties, touch-vriendelijk
+
+## 🔍 SEO Optimalisatie
+Website is geoptimaliseerd voor:
+- "Loopbaanbegeleiding België"
+- "Carrière coaching jongvolwassenen"
+- "Betaalbare loopbaanbegeleiding"
+- "YOLO Career Olivier Aucremanne"
+
+## 📞 Contact Formulier
+Formulier bevat specifieke opties:
+- Individueel Traject (€90)
+- Groeps-Traject
+- Algemene Informatie
+- Iets Anders
+
+## 🚀 Performance
+- **Snelle laadtijd**: Geoptimaliseerde CSS en JavaScript
+- **Mobile-first**: Ontworpen voor mobiele gebruikers
+- **Toegankelijkheid**: WCAG richtlijnen gevolgd
+
+## 📈 Volgende Stappen
+1. **Upload Olivier's foto**
+2. **Update contactgegevens**
+3. **Test alle formulieren**
+4. **Koppel domein yolocareer.be**
+5. **Voeg Google Analytics toe** (optioneel)
+
+## 💡 Marketing Tips
+- **LinkedIn**: Deel website op LinkedIn voor professionele zichtbaarheid
+- **Facebook**: Gebruik voor lokale community bereik
+- **Google My Business**: Registreer voor lokale zoekopdrachten
+- **Testimonials**: Voeg later klantervaringen toe
+
+De website is klaar voor deployment en volledig afgestemd op YOLO Career's missie van toegankelijke loopbaanbegeleiding!
