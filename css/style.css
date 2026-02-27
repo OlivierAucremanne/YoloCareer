@@ -264,7 +264,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Hero Visual with 3D Effects */
+/* Hero Profile Section */
 .hero-visual {
     position: relative;
     height: 400px;
@@ -273,70 +273,39 @@ body {
     justify-content: center;
 }
 
-.hero-graphic {
-    position: relative;
-    width: 300px;
-    height: 300px;
-}
-
-.floating-card {
-    position: absolute;
+.hero-profile {
+    text-align: center;
     background: white;
+    padding: var(--spacing-2xl);
     border-radius: var(--radius-xl);
-    padding: var(--spacing-lg);
     box-shadow: var(--shadow-large);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-sm);
-    transition: var(--transition-slow);
     border: 1px solid var(--border-color);
+    transition: var(--transition-normal);
 }
 
-.floating-card i {
+.hero-profile:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-large);
+}
+
+.hero-profile-image {
+    margin-bottom: var(--spacing-lg);
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: var(--shadow-medium);
+}
+
+.hero-profile-name {
     font-size: var(--font-size-2xl);
-    color: var(--primary-color);
-}
-
-.floating-card span {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-primary);
-    font-size: var(--font-size-sm);
-}
-
-.card-1 {
-    top: 0;
-    left: 0;
-    animation: float1 6s ease-in-out infinite;
-}
-
-.card-2 {
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    animation: float2 6s ease-in-out infinite 2s;
-}
-
-.card-3 {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: float3 6s ease-in-out infinite 4s;
-}
-
-@keyframes float1 {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(5deg); }
-}
-
-@keyframes float2 {
-    0%, 100% { transform: translateY(-50%) translateX(0px) rotate(0deg); }
-    50% { transform: translateY(-50%) translateX(-15px) rotate(-3deg); }
-}
-
-@keyframes float3 {
-    0%, 100% { transform: translateX(-50%) translateY(0px) rotate(0deg); }
-    50% { transform: translateX(-50%) translateY(-15px) rotate(3deg); }
+    margin: 0;
 }
 
 /* Section Styles */
@@ -808,16 +777,20 @@ section {
     }
 
     .hero-visual {
-        height: 250px;
+        height: 300px;
     }
 
-    .hero-graphic {
-        width: 200px;
-        height: 200px;
+    .hero-profile {
+        padding: var(--spacing-lg);
     }
 
-    .floating-card {
-        padding: var(--spacing-md);
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-profile-name {
+        font-size: var(--font-size-xl);
     }
 }
 
