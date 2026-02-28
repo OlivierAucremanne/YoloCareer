@@ -1158,6 +1158,95 @@ textarea:focus {
 
 /* YOLO Career Specific Styles */
 
+/* Reviews Section */
+.reviews {
+    padding: var(--spacing-3xl) 0;
+    background: var(--bg-secondary);
+}
+
+.reviews-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.review-item {
+    margin-bottom: var(--spacing-2xl);
+    max-width: 60%;
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-light);
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+
+.review-left {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.review-right {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.review-quote {
+    font-style: italic;
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0 0 var(--spacing-md) 0;
+    position: relative;
+}
+
+.review-quote::before {
+    content: '"';
+    font-size: 2rem;
+    color: var(--primary-color);
+    position: absolute;
+    left: -15px;
+    top: -5px;
+    font-weight: bold;
+}
+
+.review-quote::after {
+    content: '"';
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.review-author {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: var(--font-size-base);
+    font-style: normal;
+}
+
+.reviews-disclaimer {
+    text-align: center;
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.reviews-disclaimer p {
+    color: var(--text-light);
+    font-size: var(--font-size-sm);
+}
+
+/* About Story Full Width */
+.about-story-full {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: var(--spacing-3xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-light);
+    border: 1px solid var(--border-color);
+}
+
 /* Hero Section Updates */
 .hero-slogan {
     font-size: var(--font-size-xl);
@@ -1173,12 +1262,7 @@ textarea:focus {
     background: var(--bg-secondary);
 }
 
-.about-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: var(--spacing-3xl);
-    align-items: start;
-}
+/* About content styling removed - now using about-story-full */
 
 .about-profile {
     text-align: center;
@@ -1610,9 +1694,14 @@ textarea:focus {
 
 /* Responsive Design for YOLO Career */
 @media (max-width: 768px) {
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-2xl);
+    .review-item {
+        max-width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .about-story-full {
+        padding: var(--spacing-xl);
     }
     
     .track-content {
