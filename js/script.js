@@ -88,13 +88,17 @@ function initContactForm() {
                 return;
             }
             
-            // Simulate form submission (replace with actual backend integration)
-            showNotification('Bericht wordt verzonden...', 'info');
+            // Create mailto link with form data
+            const subject = encodeURIComponent(`YOLO Career Contact: ${subject}`);
+            const body = encodeURIComponent(`Naam: ${name}\nEmail: ${email}\nInteresse: ${formData.get('interest')}\n\nBericht:\n${message}`);
+            const mailtoLink = `mailto:olivier.aucremanne@gmail.com?subject=${subject}&body=${body}`;
             
-            setTimeout(() => {
-                showNotification('Bedankt voor uw bericht! Wij nemen zo spoedig mogelijk contact met u op.', 'success');
-                contactForm.reset();
-            }, 1500);
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            showNotification('Je email programma wordt geopend om het bericht te versturen.', 'success');
+            contactForm.reset();
         });
     }
 }
