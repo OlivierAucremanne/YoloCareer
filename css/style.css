@@ -1158,6 +1158,91 @@ textarea:focus {
 
 /* YOLO Career Specific Styles */
 
+/* Over Yolo Career Section */
+.over-yolo-career {
+    padding: var(--spacing-3xl) 0;
+    background: var(--bg-primary);
+    margin-top: 70px; /* Account for fixed navbar */
+}
+
+.yolo-intro {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.yolo-content {
+    background: white;
+    padding: var(--spacing-3xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-light);
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.yolo-content h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+}
+
+.yolo-description {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-lg);
+}
+
+.yolo-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
+}
+
+.value-card {
+    background: var(--bg-secondary);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-normal);
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    background: white;
+}
+
+.value-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.value-icon i {
+    font-size: var(--font-size-xl);
+    color: white;
+}
+
+.value-card h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.value-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: var(--font-size-sm);
+}
+
 /* Reviews Section */
 .reviews {
     padding: var(--spacing-3xl) 0;
@@ -1694,6 +1779,15 @@ textarea:focus {
 
 /* Responsive Design for YOLO Career */
 @media (max-width: 768px) {
+    .yolo-values {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .yolo-content {
+        padding: var(--spacing-xl);
+    }
+    
     .review-item {
         max-width: 100%;
         margin-left: 0 !important;
