@@ -66,6 +66,15 @@
     }
 }
 
+/* Fix heading contrast in Dark Mode (safe override) */
+@media (prefers-color-scheme: dark) {
+    h2,
+    h3,
+    h4 {
+        color: #e2e8f0;
+    }
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
