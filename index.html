@@ -356,10 +356,27 @@ Klaar om jouw carrièrepad vorm te geven? Let's talk!
 <li><a href="#groep">Groepstraject</a></li>
 </ul>
 </div>
+
 <div class="footer-section">
-<h4>Contact Info</h4>
-<p><i class="fas fa-envelope"></i> Olivier.Aucremanne@gmail.com</p>
+  <h4>Contact Info</h4>
+
+  <p style="display:flex; align-items:center; gap:8px;">
+    <i class="fas fa-envelope" aria-hidden="true"></i>
+    <span id="footer-email"></span>
+  </p>
+
+  <script>
+    (function () {
+      const user = "Olivier.Aucremanne";
+      const domain = "gmail.com";
+      const email = user + "@" + domain;
+
+      document.getElementById("footer-email").innerHTML =
+        '<a href="mailto:' + email + '" style="text-decoration: none;">' + email + '</a>';
+    })();
+  </script>
 </div>
+
 </div>
 <div class="footer-bottom">
 <p>Copyright © 2026 Yolo Career - Olivier Aucremanne. Ondernemingsnummer: 1022.892.714. BTW-nummer: BE1022.892.714. Alle rechten voorbehouden.</p>
