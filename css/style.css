@@ -66,12 +66,12 @@
     }
 }
 
-/* Fix heading contrast in Dark Mode (safe override) */
+/* Fix heading contrast in Dark Mode (force override) */
 @media (prefers-color-scheme: dark) {
     h2,
     h3,
     h4 {
-        color: #94a3b8;
+        color: #e2e8f0 !important;
     }
 }
 
