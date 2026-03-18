@@ -71,8 +71,16 @@
     h2,
     h3,
     h4 {
-        color: #94a3b8 !important;
+        color: #64748b !important;
     }
+}
+
+  /* Doorlopende tekst die DIRECT volgt op een heading */
+  h2 + p,
+  h3 + p,
+  h4 + p {
+    color: #94a3b8 !important; /* of var(--text-light) */
+  }
 }
 
 /* Reset and Base Styles */
