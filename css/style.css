@@ -1650,6 +1650,18 @@ textarea:focus {
     text-align: center;
 }
 
+
+.feature-intro{
+  background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-light);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-normal);
+    margin-bottom: var(--spacing-2xl);
+}
+
+
 .features-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
