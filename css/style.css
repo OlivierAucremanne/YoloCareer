@@ -1942,3 +1942,102 @@ textarea:focus {
         line-height: 1.4;
     }
 }
+
+
+
+/* =========================================
+   ✅ STRONG DARK MODE FIX (FULL WEBSITE)
+   Zorgt dat ALLE tekst duidelijk leesbaar is
+========================================= */
+
+@media (prefers-color-scheme: dark) {
+
+    /* --- Algemene tekst --- */
+    body {
+        color: #f1f5f9 !important;
+        background-color: #0f172a !important;
+    }
+
+    p, span, li, a {
+        color: #e2e8f0 !important;
+    }
+
+    /* --- Headings (sterker contrast) --- */
+    h1, h2, h3, h4, h5, h6 {
+        color: #ffffff !important;
+    }
+
+    /* --- Specifiek: tekst NA headings --- */
+    h2 + p,
+    h3 + p,
+    h4 + p {
+        color: #cbd5e1 !important;
+    }
+
+    /* --- Cards / boxen die nog wit zijn --- */
+    .hero-profile,
+    .service-card,
+    .value-item,
+    .stat-item,
+    .contact-form,
+    .profile-section,
+    .story-section,
+    .track-intro,
+    .feature-item,
+    .benefit-item,
+    .review-item,
+    .mission-card,
+    .group-intro,
+    .track-cta,
+    .feature-intro {
+        background: #1e293b !important;
+        border-color: #334155 !important;
+    }
+
+    /* --- Sections met lichte achtergrond --- */
+    .about,
+    .reviews,
+    .contact,
+    .group-track,
+    .individual-track {
+        background: #0f172a !important;
+    }
+
+    /* --- Navbar specifiek --- */
+    .navbar {
+        background: rgba(15, 23, 42, 0.9) !important;
+        border-bottom: 1px solid #334155 !important;
+    }
+
+    /* --- Buttons blijven zichtbaar --- */
+    .btn-primary {
+        background: #3b82f6 !important;
+        color: white !important;
+    }
+
+    .btn-secondary {
+        color: #60a5fa !important;
+        border-color: #60a5fa !important;
+    }
+
+    /* --- Mission quote (was al goed, maar fix contrast) --- */
+    .mission-quote {
+        color: #ffffff !important;
+    }
+
+    /* --- Inline styles overrulen (BELANGRIJK voor jouw HTML) --- */
+    [style*="#64748b"],
+    [style*="#334155"] {
+        color: #cbd5e1 !important;
+    }
+
+    /* --- Links duidelijk zichtbaar --- */
+    a {
+        color: #93c5fd !important;
+    }
+
+    a:hover {
+        color: #bfdbfe !important;
+    }
+}
+``
